@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Data Kategori - SantriKoding.com</title>
+    <title>Data Pengguna - SantriKoding.com</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
@@ -24,11 +24,16 @@
                         <table class="table table-bordered">
                             <thead>
                               <tr>
-                                <th scope="col">Nama_Kategori</th>
+                                <th scope="col">id_pengguna</th>
+                                <th scope="col">nama_lengkap</th>
+                                <th scope="col">alamat</th>
+                                <th scope="col">jenis_kelamin</th>
+                                <th scope="col">username</th>
+                                <th scope="col">password</th>
                               </tr>
                             </thead>
                             <tbody>
-                              @forelse ($kategoris as $kategori)
+                              @forelse ($penggunas as $pengguna)
                                 <tr>
                                     <td class="text-center">
                                         <img src="{{ asset('/storage/posts/'.$post->image) }}" class="rounded" style="width: 150px">
@@ -52,7 +57,7 @@
                               @endforelse
                             </tbody>
                           </table>  
-                          {{ $kategoris->links() }}
+                          {{ $penggunas->links() }}
                     </div>
                 </div>
             </div>
